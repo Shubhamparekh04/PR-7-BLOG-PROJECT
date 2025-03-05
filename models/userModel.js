@@ -3,13 +3,12 @@ const { default: mongoose, model } = require("mongoose");
 const blogSchema = new mongoose.Schema(
   {
     title: String,
-    author: String,
-    imgUrl: String,
-    contact: String,
+    image: String,
+    content: String,
+    username: String,
   },
   { timestamps: true }
 );
 
-const Blog = mongoose.model("BlogTBL", blogSchema);
-
-module.exports = Blog;
+const blogModule = mongoose.model("blogModule", blogSchema);
+module.exports = blogModule;
